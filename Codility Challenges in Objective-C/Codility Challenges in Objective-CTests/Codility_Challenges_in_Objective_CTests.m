@@ -8,6 +8,14 @@
 
 #import <XCTest/XCTest.h>
 
+#import "ViewController.h"
+
+@interface ViewController (Testing)
+
++ (NSInteger)binaryGap:(NSInteger)integer;
+
+@end
+
 @interface Codility_Challenges_in_Objective_CTests : XCTestCase
 
 @end
@@ -16,24 +24,34 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testBinaryGapWithNine {
+    XCTAssertEqual(2, [ViewController binaryGap:9], @"We expected the Binary Gap to be 2");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testBinaryGapWithFifteen {
+    XCTAssertEqual(0, [ViewController binaryGap:15], @"We expected the Binary Gap to be 0");
+}
+
+- (void)testBinaryGapWithTwenty {
+    XCTAssertEqual(1, [ViewController binaryGap:20], @"We expected the Binary Gap to be 1");
+}
+
+- (void)testBinaryGapWithFiveHundredTwentyNine {
+    XCTAssertEqual(4, [ViewController binaryGap:529], @"We expected the Binary Gap to be 4");
+}
+
+- (void)testBinaryGapWithZeroEdgeCase {
+    XCTAssertEqual(0, [ViewController binaryGap:0], @"We expected the Binary Gap to be 0");
+}
+
+- (void)testBinaryGapWithNegativeEdgeCase {
+    XCTAssertEqual(0, [ViewController binaryGap:-1], @"We expected the Binary Gap to be 0");
 }
 
 @end
