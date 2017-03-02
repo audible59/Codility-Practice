@@ -32,6 +32,7 @@
     NSLog(@"Binary Gap is - %ld", (long)[ViewController binaryGap:15]);
     NSLog(@"Binary Gap is - %ld", (long)[ViewController binaryGap:20]);
     NSLog(@"Binary Gap is - %ld", (long)[ViewController binaryGap:529]);
+    NSLog(@"Binary Gap is - %ld", (long)[ViewController binaryGap:1610612737]);
 }
 
 - (void)didReceiveMemoryWarning {

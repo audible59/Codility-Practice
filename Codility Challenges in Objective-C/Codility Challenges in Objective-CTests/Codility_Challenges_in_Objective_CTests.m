@@ -54,4 +54,8 @@
     XCTAssertEqual(0, [ViewController binaryGap:-1], @"We expected the Binary Gap to be 0");
 }
 
+- (void)testBinaryGapWithLargeGapEdgeCase {
+    XCTAssertEqual(28, [ViewController binaryGap:1610612737], @"We expected the Binary Gap to be 28");
+}
+
 @end
