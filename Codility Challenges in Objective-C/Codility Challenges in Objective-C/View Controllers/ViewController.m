@@ -2,14 +2,13 @@
 //  ViewController.m
 //  Codility Challenges in Objective-C
 //
-//  Created by Lindsey Rafferty on 3/2/17.
+//  Created by Kevin E. Rafferty II on 3/2/17.
 //  Copyright © 2017 Quiver Coding. All rights reserved.
 //
 
 #import "ViewController.h"
 
 @interface ViewController ()
-
 
 /**
  This method will take a positive NSInteger that is within the range [1..2,147,483,647].
@@ -18,7 +17,6 @@
  @return The length of the longest binary gap. Zero will be returned if there is no binary gap.
  */
 + (int)binaryGap:(int)integer;
-
 
 /**
  This method will take an NSMutableArray that contains an odd number of elements within the range [1..1,000,000,000].

@@ -2,7 +2,7 @@
 //  Codility_Challenges_in_Objective_CTests.m
 //  Codility Challenges in Objective-CTests
 //
-//  Created by Lindsey Rafferty on 3/2/17.
+//  Created by Kevin E. Rafferty II on 3/2/17.
 //  Copyright © 2017 Quiver Coding. All rights reserved.
 //
 
