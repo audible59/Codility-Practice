@@ -12,7 +12,8 @@
 
 @interface ViewController (Testing)
 
-+ (NSInteger)binaryGap:(NSInteger)integer;
++ (int)binaryGap:(int)integer;
++ (int)oddOccurrencesInArray:(NSArray *)array;
 
 @end
 
@@ -29,6 +30,8 @@
 - (void)tearDown {
     [super tearDown];
 }
+
+#pragma mark - Binary Gap Unit Tests -
 
 - (void)testBinaryGapWithNine {
     XCTAssertEqual(2, [ViewController binaryGap:9], @"We expected the Binary Gap to be 2");
@@ -56,6 +59,14 @@
 
 - (void)testBinaryGapWithLargeGapEdgeCase {
     XCTAssertEqual(28, [ViewController binaryGap:1610612737], @"We expected the Binary Gap to be 28");
+}
+
+#pragma mark - Odd Occurrence Within the Array Unit Tests -
+
+- (void)testOddOccurrencesWithinTheArrayWithStandardCase {
+    NSArray *testArray = @[@9, @3, @9, @3, @9, @7, @9];
+    
+    XCTAssertEqual(7, [ViewController oddOccurrencesInArray:testArray], @"We expected the Odd Occurrence to be 7");
 }
 
 @end

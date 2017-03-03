@@ -17,7 +17,7 @@
  @param integer An NSInteger that will be converted to a binary representation.
  @return The length of the longest binary gap. Zero will be returned if there is no binary gap.
  */
-+ (NSInteger)binaryGap:(NSInteger)integer;
++ (int)binaryGap:(int)integer;
 
 
 /**
@@ -54,9 +54,9 @@
 
 #pragma mark - Codility Challenges -
 
-+ (NSInteger)binaryGap:(NSInteger)integer {
-    NSInteger max = 0;
-    NSInteger gap = 0;
++ (int)binaryGap:(int)integer {
+    int max = 0;
+    int gap = 0;
     
     // If the integer is zero or negative we return immediately
     if (integer == 0 || integer < 0) {
@@ -90,7 +90,7 @@
     
     if (array && [array count] > 0) {
         for (int i = 0; i < [array count]; i++) {
-            oddElement = oddElement ^ (int)[array objectAtIndex:i];
+            oddElement = oddElement ^ [[array objectAtIndex:i] intValue];
         }
     }
     
