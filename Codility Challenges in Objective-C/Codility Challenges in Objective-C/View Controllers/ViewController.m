@@ -19,6 +19,15 @@
  */
 + (NSInteger)binaryGap:(NSInteger)integer;
 
+
+/**
+ This method will take an NSMutableArray that contains an odd number of elements within the range [1..1,000,000,000].
+
+ @param array An NSMutableArray containing an odd number of elements
+ @return The value of the element that has been left unpaired
+ */
++ (int)oddOccurrencesInArray:(NSArray *)array;
+
 @end
 
 @implementation ViewController
@@ -33,6 +42,10 @@
     NSLog(@"Binary Gap is - %ld", (long)[ViewController binaryGap:20]);
     NSLog(@"Binary Gap is - %ld", (long)[ViewController binaryGap:529]);
     NSLog(@"Binary Gap is - %ld", (long)[ViewController binaryGap:1610612737]);
+    
+    NSArray *testArray = @[@9, @3, @9, @3, @9, @7, @9];
+    
+    NSLog(@"Odd occurence in the Array is - %ld", (long)[ViewController oddOccurrencesInArray:testArray]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,6 +83,18 @@
     }
     
     return max;
+}
+
++ (int)oddOccurrencesInArray:(NSArray *)array {
+    int oddElement = 0;
+    
+    if (array && [array count] > 0) {
+        for (int i = 0; i < [array count]; i++) {
+            oddElement = oddElement ^ (int)[array objectAtIndex:i];
+        }
+    }
+    
+    return oddElement;
 }
 
 @end
