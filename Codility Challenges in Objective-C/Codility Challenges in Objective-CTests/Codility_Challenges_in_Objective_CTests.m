@@ -69,4 +69,16 @@
     XCTAssertEqual(7, [ViewController oddOccurrencesInArray:testArray], @"We expected the Odd Occurrence to be 7");
 }
 
+- (void)testOddOccurrencesWithinTheArrayWithEmptyArrayCase {
+    NSArray *testArray = @[];
+    
+    XCTAssertEqual(-1, [ViewController oddOccurrencesInArray:testArray], @"We expected the Odd Occurrence to be -1");
+}
+
+- (void)testOddOccurrencesWithinTheArrayWithNilArrayCase {
+    NSArray *testArray = nil;
+    
+    XCTAssertEqual(-1, [ViewController oddOccurrencesInArray:testArray], @"We expected the Odd Occurrence to be -1");
+}
+
 @end

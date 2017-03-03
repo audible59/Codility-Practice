@@ -92,6 +92,10 @@
         for (int i = 0; i < [array count]; i++) {
             oddElement = oddElement ^ [[array objectAtIndex:i] intValue];
         }
+    } else {
+        NSLog(@"The array is either empty or invalid");
+        
+        oddElement = -1;
     }
     
     return oddElement;
